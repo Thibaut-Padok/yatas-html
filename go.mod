@@ -1,4 +1,4 @@
-module github.com/stangirard/yatas-template
+module github.com/stangirard/yatas-html
 
 go 1.19
 

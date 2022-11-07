@@ -23,7 +23,7 @@ func (g *YatasPlugin) Run(c *commons.Config) []commons.Tests {
 	}
 	var checksAll []commons.Tests
 
-	checks, err := runPlugin(c, "template")
+	checks, err := runPlugin(c, "html")
 	if err != nil {
 		g.logger.Error("Error running plugins", "error", err)
 	}
@@ -56,7 +56,7 @@ func main() {
 	// pluginMap is the map of plugins we can dispense.
 	// Name of your plugin
 	var pluginMap = map[string]plugin.Plugin{
-		"template": &commons.YatasPlugin{Impl: yatasPlugin},
+		"html": &commons.YatasPlugin{Impl: yatasPlugin},
 	}
 
 	logger.Debug("message from plugin", "foo", "bar")
@@ -72,6 +72,7 @@ func runPlugin(c *commons.Config, plugin string) ([]commons.Tests, error) {
 	var checksAll []commons.Tests
 
 	// Run the checks here
+	WriteHtml(c.Tests)
 
 	return checksAll, nil
 }

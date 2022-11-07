@@ -1,0 +1,32 @@
+plugins:
+  - name: "aws"
+    enabled: true
+    source: "github.com/padok-team/yatas-aws"
+    version: "latest"
+    description: "Check for AWS good practices"
+  - name: "html"
+    enabled: true
+    type: "report"
+    source: "github.com/StanGirard/yatas-html"
+    version: "local"
+    description: "Genereates a html report"
+
+ignore:
+  - id: "AWS_VPC_004"
+    regex: true
+    values: 
+      - "VPC Flow Logs are not enabled on vpc-888.*"
+  - id: "AWS_VPC_003"
+    regex: false
+    values: 
+      - "VPC has only one gateway on vpc-08ffec87e034a8953"
+
+pluginsConfiguration:
+  - pluginName: aws
+    accounts:
+      - profile: ""
+        sso: true
+        region: "eu-west-3"
+        name: "yatas"
+    
+      
