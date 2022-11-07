@@ -26,11 +26,3 @@ Run ```yatas --detail```
 <p align="center">
 <img src="docs/demo-html.png" alt="yatas-logo" width="30%">
 <p align="center">
-
-## Plugins implementation - TODELETE
-
-Simply use this repository as a template and implement your own plugin.
-
-Don't forget to change the name of the plugin in the `Makefile` and the `go.mod` file.
-
-Add you code in `main.go` and in the function `RunPlugin` 
