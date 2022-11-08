@@ -15,9 +15,9 @@ in .yatas.yml file add:
   - name: "html"
     enabled: true
     type: "report"
-    source: "github.com/StanGirard/yatas-html"
-    version: "local"
-    description: "Genereates a html report in report.html"
+    source: "github.com/Thibaut-Padok/yatas-html"
+    version: "latest"
+    description: "Genereates a html report in report.html file"
 ```
 
 Run ```yatas --detail```

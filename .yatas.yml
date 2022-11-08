@@ -7,9 +7,9 @@ plugins:
   - name: "html"
     enabled: true
     type: "report"
-    source: "github.com/StanGirard/yatas-html"
-    version: "local"
-    description: "Genereates a html report"
+    source: "github.com/Thibaut-Padok/yatas-html"
+    version: "latest"
+    description: "Genereates a html report in report.html file"
 
 ignore:
   - id: "AWS_VPC_004"
