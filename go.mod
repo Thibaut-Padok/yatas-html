@@ -1,4 +1,4 @@
-module github.com/stangirard/yatas-html
+module github.com/Thibaut-Padok/yatas-html
 
 go 1.19
 

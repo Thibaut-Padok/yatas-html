@@ -8,9 +8,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 1.155µs
-      starttime: 2022-11-07T23:00:14.148744+01:00
-      endtime: 2022-11-07T23:00:04.609947+01:00
+      duration: 1.895µs
+      starttime: 2022-11-17T02:50:05.044551+01:00
+      endtime: 2022-11-17T02:49:56.714996+01:00
     - name: ACM certificate expires in more than 90 days
       description: Check if certificate expires in 90 days
       status: OK
@@ -19,9 +19,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 1.069µs
-      starttime: 2022-11-07T23:00:14.148745+01:00
-      endtime: 2022-11-07T23:00:04.609948+01:00
+      duration: 1.721µs
+      starttime: 2022-11-17T02:50:05.044552+01:00
+      endtime: 2022-11-17T02:49:56.715002+01:00
     - name: ACM certificates are used
       description: Check if certificate is in use
       status: OK
@@ -30,9 +30,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 2.158µs
-      starttime: 2022-11-07T23:00:14.148753+01:00
-      endtime: 2022-11-07T23:00:04.609951+01:00
+      duration: 681ns
+      starttime: 2022-11-17T02:50:05.044551+01:00
+      endtime: 2022-11-17T02:49:56.714998+01:00
     - name: ApiGateways logs are sent to Cloudwatch
       description: Check if all cloudwatch logs are enabled for all stages
       status: OK
@@ -41,9 +41,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 2.445µs
-      starttime: 2022-11-07T23:00:14.14879+01:00
-      endtime: 2022-11-07T23:00:04.698137+01:00
+      duration: 2.294µs
+      starttime: 2022-11-17T02:50:05.044563+01:00
+      endtime: 2022-11-17T02:49:56.769215+01:00
     - name: ApiGateways are protected by an ACL
       description: Check if all stages are protected by ACL
       status: OK
@@ -52,9 +52,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 1.256µs
-      starttime: 2022-11-07T23:00:14.14879+01:00
-      endtime: 2022-11-07T23:00:04.69814+01:00
+      duration: 1.629µs
+      starttime: 2022-11-17T02:50:05.044564+01:00
+      endtime: 2022-11-17T02:49:56.76922+01:00
     - name: ApiGateways have tracing enabled
       description: Check if all stages are enabled for tracing
       status: OK
@@ -63,9 +63,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 1.237µs
-      starttime: 2022-11-07T23:00:14.14879+01:00
-      endtime: 2022-11-07T23:00:04.698143+01:00
+      duration: 970ns
+      starttime: 2022-11-17T02:50:05.044564+01:00
+      endtime: 2022-11-17T02:49:56.769217+01:00
     - name: Autoscaling maximum capacity is below 80%
       description: Check if all autoscaling groups have a desired capacity below 80%
       status: OK
@@ -74,9 +74,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 3.884µs
-      starttime: 2022-11-07T23:00:14.148791+01:00
-      endtime: 2022-11-07T23:00:04.785829+01:00
+      duration: 1.931µs
+      starttime: 2022-11-17T02:50:05.044516+01:00
+      endtime: 2022-11-17T02:49:56.661871+01:00
     - name: Autoscaling group are in two availability zones
       description: Check if all autoscaling groups have at least two availability zones
       status: OK
@@ -85,9 +85,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 1.625µs
-      starttime: 2022-11-07T23:00:14.148791+01:00
-      endtime: 2022-11-07T23:00:04.78585+01:00
+      duration: 993ns
+      starttime: 2022-11-17T02:50:05.044527+01:00
+      endtime: 2022-11-17T02:49:56.661874+01:00
     - name: EC2's Snapshots are encrypted
       description: Check if all snapshots are encrypted
       status: OK
@@ -96,9 +96,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 1.623µs
-      starttime: 2022-11-07T23:00:14.148819+01:00
-      endtime: 2022-11-07T23:00:05.058046+01:00
+      duration: 907ns
+      starttime: 2022-11-17T02:50:05.044566+01:00
+      endtime: 2022-11-17T02:49:56.826594+01:00
     - name: EC2's snapshots are younger than a day old
       description: Check if all snapshots are younger than 24h
       status: FAIL
@@ -107,12 +107,15 @@
         - Security
         - Good Practice
       results:
+        - message: Volume vol-055f7aefc957ef83f has no snapshot younger than 24h
+          status: FAIL
+          resource_arn: vol-055f7aefc957ef83f
         - message: Volume vol-05e2ed98f2cb26bc7 has no snapshot younger than 24h
           status: FAIL
           resource_arn: vol-05e2ed98f2cb26bc7
-      duration: 3.207µs
-      starttime: 2022-11-07T23:00:14.148819+01:00
-      endtime: 2022-11-07T23:00:05.058059+01:00
+      duration: 1.63µs
+      starttime: 2022-11-17T02:50:05.044567+01:00
+      endtime: 2022-11-17T02:49:56.826604+01:00
     - name: Cloudfronts enforce TLS 1.2 at least
       description: Check if all cloudfront distributions have TLS 1.2 minimum
       status: FAIL
@@ -124,9 +127,12 @@
         - message: TLS 1.2 minimum is not set on E20RPP2IKLA262
           status: FAIL
           resource_arn: E20RPP2IKLA262
-      duration: 10.761µs
-      starttime: 2022-11-07T23:00:14.14882+01:00
-      endtime: 2022-11-07T23:00:05.153859+01:00
+        - message: TLS 1.2 minimum is not set on E1N9JVYT24K8GF
+          status: FAIL
+          resource_arn: E1N9JVYT24K8GF
+      duration: 1.818µs
+      starttime: 2022-11-17T02:50:05.044584+01:00
+      endtime: 2022-11-17T02:49:57.336227+01:00
     - name: Cloudfronts only allow HTTPS or redirect to HTTPS
       description: Check if all cloudfront distributions are HTTPS only
       status: OK
@@ -138,9 +144,12 @@
         - message: Cloudfront distribution is HTTPS only on E20RPP2IKLA262
           status: OK
           resource_arn: E20RPP2IKLA262
-      duration: 15.903µs
-      starttime: 2022-11-07T23:00:14.148821+01:00
-      endtime: 2022-11-07T23:00:05.153863+01:00
+        - message: Cloudfront distribution is HTTPS only on E1N9JVYT24K8GF
+          status: OK
+          resource_arn: E1N9JVYT24K8GF
+      duration: 15.241µs
+      starttime: 2022-11-17T02:50:05.044584+01:00
+      endtime: 2022-11-17T02:49:57.336232+01:00
     - name: Cloudfronts queries are logged
       description: Check if all cloudfront distributions have standard logging enabled
       status: FAIL
@@ -152,9 +161,12 @@
         - message: Standard logging is not enabled on E20RPP2IKLA262
           status: FAIL
           resource_arn: E20RPP2IKLA262
-      duration: 6.298µs
-      starttime: 2022-11-07T23:00:14.148822+01:00
-      endtime: 2022-11-07T23:00:05.153885+01:00
+        - message: Standard logging is not enabled on E1N9JVYT24K8GF
+          status: FAIL
+          resource_arn: E1N9JVYT24K8GF
+      duration: 3.889µs
+      starttime: 2022-11-17T02:50:05.044582+01:00
+      endtime: 2022-11-17T02:49:57.336216+01:00
     - name: Cloudfronts are logging Cookies
       description: Check if all cloudfront distributions have cookies logging enabled
       status: FAIL
@@ -166,23 +178,29 @@
         - message: Cookie logging is not enabled on E20RPP2IKLA262
           status: FAIL
           resource_arn: E20RPP2IKLA262
-      duration: 14.952µs
-      starttime: 2022-11-07T23:00:14.148822+01:00
-      endtime: 2022-11-07T23:00:05.153884+01:00
+        - message: Cookie logging is not enabled on E1N9JVYT24K8GF
+          status: FAIL
+          resource_arn: E1N9JVYT24K8GF
+      duration: 1.522µs
+      starttime: 2022-11-17T02:50:05.044583+01:00
+      endtime: 2022-11-17T02:49:57.336219+01:00
     - name: Cloudfronts are protected by an ACL
       description: Check if all cloudfront distributions have an ACL used
-      status: OK
+      status: FAIL
       id: AWS_CFT_005
       categories:
         - Security
         - Good Practice
       results:
-        - message: ACL is used on E20RPP2IKLA262
-          status: OK
+        - message: ACL is not used on E20RPP2IKLA262
+          status: FAIL
           resource_arn: E20RPP2IKLA262
-      duration: 3.764µs
-      starttime: 2022-11-07T23:00:14.148821+01:00
-      endtime: 2022-11-07T23:00:05.153873+01:00
+        - message: ACL is used on E1N9JVYT24K8GF
+          status: OK
+          resource_arn: E1N9JVYT24K8GF
+      duration: 2.395µs
+      starttime: 2022-11-17T02:50:05.044583+01:00
+      endtime: 2022-11-17T02:49:57.336223+01:00
     - name: Cloudtrails are encrypted
       description: check if all cloudtrails are encrypted
       status: OK
@@ -194,9 +212,9 @@
         - message: Cloudtrail test is encrypted
           status: OK
           resource_arn: arn:aws:cloudtrail:eu-west-2:766369807176:trail/test
-      duration: 6.042µs
-      starttime: 2022-11-07T23:00:14.148776+01:00
-      endtime: 2022-11-07T23:00:04.665148+01:00
+      duration: 2.257µs
+      starttime: 2022-11-17T02:50:05.044552+01:00
+      endtime: 2022-11-17T02:49:56.759676+01:00
     - name: Cloudtrails have Global Service Events Activated
       description: check if all cloudtrails have global service events enabled
       status: OK
@@ -208,9 +226,9 @@
         - message: Cloudtrail test has global service events enabled
           status: OK
           resource_arn: arn:aws:cloudtrail:eu-west-2:766369807176:trail/test
-      duration: 14.779µs
-      starttime: 2022-11-07T23:00:14.148777+01:00
-      endtime: 2022-11-07T23:00:04.665204+01:00
+      duration: 1.301µs
+      starttime: 2022-11-17T02:50:05.044553+01:00
+      endtime: 2022-11-17T02:49:56.759679+01:00
     - name: Cloudtrails are in multiple regions
       description: check if all cloudtrails are multi region
       status: OK
@@ -222,9 +240,9 @@
         - message: Cloudtrail test is multi region
           status: OK
           resource_arn: arn:aws:cloudtrail:eu-west-2:766369807176:trail/test
-      duration: 2.467µs
-      starttime: 2022-11-07T23:00:14.148777+01:00
-      endtime: 2022-11-07T23:00:04.665155+01:00
+      duration: 1.08µs
+      starttime: 2022-11-17T02:50:05.044562+01:00
+      endtime: 2022-11-17T02:49:56.759681+01:00
     - name: Cognito allows unauthenticated users
       description: Check if Cognito allows unauthenticated users
       status: OK
@@ -233,9 +251,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 3.815µs
-      starttime: 2022-11-07T23:00:14.148778+01:00
-      endtime: 2022-11-07T23:00:04.670024+01:00
+      duration: 1.841µs
+      starttime: 2022-11-17T02:50:05.044552+01:00
+      endtime: 2022-11-17T02:49:56.732067+01:00
     - name: Dynamodbs are encrypted
       description: Check if DynamoDB encryption is enabled
       status: OK
@@ -244,9 +262,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 3.972µs
-      starttime: 2022-11-07T23:00:14.148791+01:00
-      endtime: 2022-11-07T23:00:04.705311+01:00
+      duration: 2.478µs
+      starttime: 2022-11-17T02:50:05.044552+01:00
+      endtime: 2022-11-17T02:49:56.749558+01:00
     - name: Dynamodb have continuous backup enabled with PITR
       description: Check if DynamoDB continuous backups are enabled
       status: OK
@@ -255,9 +273,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 7.847µs
-      starttime: 2022-11-07T23:00:14.148791+01:00
-      endtime: 2022-11-07T23:00:04.705336+01:00
+      duration: 884ns
+      starttime: 2022-11-17T02:50:05.044552+01:00
+      endtime: 2022-11-17T02:49:56.749561+01:00
     - name: EC2s don't have a public IP
       description: Check if all instances have a public IP
       status: FAIL
@@ -269,9 +287,12 @@
         - message: EC2 instance i-06f4d2f33625d1482 has a public IP13.36.166.10
           status: FAIL
           resource_arn: i-06f4d2f33625d1482
-      duration: 5.419µs
-      starttime: 2022-11-07T23:00:14.148792+01:00
-      endtime: 2022-11-07T23:00:04.847583+01:00
+        - message: 'EC2 instance i-0a1a63ec0b46607bb has no public IP '
+          status: OK
+          resource_arn: i-0a1a63ec0b46607bb
+      duration: 4.329µs
+      starttime: 2022-11-17T02:50:05.044531+01:00
+      endtime: 2022-11-17T02:49:56.699771+01:00
     - name: EC2s have the monitoring option enabled
       description: Check if all instances have monitoring enabled
       status: FAIL
@@ -283,9 +304,12 @@
         - message: EC2 instance i-06f4d2f33625d1482 has no monitoring enabled
           status: FAIL
           resource_arn: i-06f4d2f33625d1482
-      duration: 10.903µs
-      starttime: 2022-11-07T23:00:14.148792+01:00
-      endtime: 2022-11-07T23:00:04.847605+01:00
+        - message: EC2 instance i-0a1a63ec0b46607bb has no monitoring enabled
+          status: FAIL
+          resource_arn: i-0a1a63ec0b46607bb
+      duration: 1.688µs
+      starttime: 2022-11-17T02:50:05.044538+01:00
+      endtime: 2022-11-17T02:49:56.699774+01:00
     - name: ECRs image are scanned on push
       description: Check if all ECRs have image scanning enabled
       status: FAIL
@@ -297,9 +321,9 @@
         - message: ECR cdk-hnb659fds-container-assets-056984988198-eu-west-3 has image scanning disabled
           status: FAIL
           resource_arn: cdk-hnb659fds-container-assets-056984988198-eu-west-3
-      duration: 2.95µs
-      starttime: 2022-11-07T23:00:14.14876+01:00
-      endtime: 2022-11-07T23:00:04.646361+01:00
+      duration: 2.594µs
+      starttime: 2022-11-17T02:50:05.044545+01:00
+      endtime: 2022-11-17T02:49:56.714561+01:00
     - name: ECRs are encrypted
       description: Check if all ECRs are encrypted
       status: OK
@@ -311,9 +335,9 @@
         - message: ECR cdk-hnb659fds-container-assets-056984988198-eu-west-3 is encrypted
           status: OK
           resource_arn: cdk-hnb659fds-container-assets-056984988198-eu-west-3
-      duration: 1.914µs
-      starttime: 2022-11-07T23:00:14.148769+01:00
-      endtime: 2022-11-07T23:00:04.646612+01:00
+      duration: 3.816µs
+      starttime: 2022-11-17T02:50:05.044546+01:00
+      endtime: 2022-11-17T02:49:56.71457+01:00
     - name: ECRs tags are immutable
       description: Check if all ECRs are tag immutable
       status: OK
@@ -325,9 +349,9 @@
         - message: ECR cdk-hnb659fds-container-assets-056984988198-eu-west-3 is tag immutable
           status: OK
           resource_arn: cdk-hnb659fds-container-assets-056984988198-eu-west-3
-      duration: 7.039µs
-      starttime: 2022-11-07T23:00:14.148761+01:00
-      endtime: 2022-11-07T23:00:04.646603+01:00
+      duration: 1.717µs
+      starttime: 2022-11-17T02:50:05.044545+01:00
+      endtime: 2022-11-17T02:49:56.714564+01:00
     - name: EKS clusters have logging enabled
       description: Check if logging is enabled
       status: OK
@@ -336,9 +360,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 4.029µs
-      starttime: 2022-11-07T23:00:14.148778+01:00
-      endtime: 2022-11-07T23:00:04.677133+01:00
+      duration: 1.692µs
+      starttime: 2022-11-17T02:50:05.044563+01:00
+      endtime: 2022-11-17T02:49:56.766907+01:00
     - name: EKS clusters have private endpoint or strict public access
       description: Check if EKS clusters have private endpoint
       status: OK
@@ -347,9 +371,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 1.76µs
-      starttime: 2022-11-07T23:00:14.148778+01:00
-      endtime: 2022-11-07T23:00:04.677138+01:00
+      duration: 674ns
+      starttime: 2022-11-17T02:50:05.044563+01:00
+      endtime: 2022-11-17T02:49:56.76691+01:00
     - name: ELB have access logs enabled
       description: Check if all load balancers have access logs enabled
       status: OK
@@ -358,9 +382,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 2.568µs
-      starttime: 2022-11-07T23:00:14.148779+01:00
-      endtime: 2022-11-07T23:00:04.693815+01:00
+      duration: 1.461µs
+      starttime: 2022-11-17T02:50:05.044539+01:00
+      endtime: 2022-11-17T02:49:56.712514+01:00
     - name: GuardDuty is enabled in the account
       description: Check if GuardDuty is enabled
       status: FAIL
@@ -372,9 +396,9 @@
         - message: GuardDuty is not enabled
           status: FAIL
           resource_arn: ""
-      duration: 4.344µs
-      starttime: 2022-11-07T23:00:14.148777+01:00
-      endtime: 2022-11-07T23:00:04.669667+01:00
+      duration: 2.337µs
+      starttime: 2022-11-17T02:50:05.044545+01:00
+      endtime: 2022-11-17T02:49:56.713324+01:00
     - name: IAM Users have 2FA activated
       description: Check if all users have 2FA activated
       status: FAIL
@@ -410,6 +434,9 @@
         - message: 2FA is activated on oscarp
           status: OK
           resource_arn: oscarp
+        - message: 2FA is activated on pierrickc
+          status: OK
+          resource_arn: pierrickc
         - message: 2FA is not activated on thibaultp
           status: FAIL
           resource_arn: thibaultp
@@ -419,9 +446,9 @@
         - message: 2FA is activated on thomasd
           status: OK
           resource_arn: thomasd
-      duration: 12.257µs
-      starttime: 2022-11-07T23:00:14.148951+01:00
-      endtime: 2022-11-07T23:00:13.35306+01:00
+      duration: 8.443µs
+      starttime: 2022-11-17T02:50:05.044771+01:00
+      endtime: 2022-11-17T02:50:02.244558+01:00
     - name: IAM access key younger than 90 days
       description: Check if all users have access key less than 90 days
       status: FAIL
@@ -445,8 +472,8 @@
         - message: Access key AKIAQ2RER5ITHXZFI2QB is older than 90 days on manonf
           status: FAIL
           resource_arn: manonf
-        - message: Access key AKIAQ2RER5ITCXLF5QM4 is younger than 90 days on manonf
-          status: OK
+        - message: Access key AKIAQ2RER5ITCXLF5QM4 is older than 90 days on manonf
+          status: FAIL
           resource_arn: manonf
         - message: Access key AKIAQ2RER5ITNQDPU2WM is younger than 90 days on nathanl@padok.fr
           status: OK
@@ -460,18 +487,24 @@
         - message: Access key AKIAQ2RER5ITH6X7IXE6 is younger than 90 days on oscarp
           status: OK
           resource_arn: oscarp
+        - message: Access key AKIAQ2RER5ITPY7GAI6U is younger than 90 days on pierrickc
+          status: OK
+          resource_arn: pierrickc
         - message: Access key AKIAQ2RER5ITB3FANQU3 is older than 90 days on thibaultp
           status: FAIL
           resource_arn: thibaultp
         - message: Access key AKIAQ2RER5ITAW7R3K52 is younger than 90 days on thibautr@padok.fr
           status: OK
           resource_arn: thibautr@padok.fr
+        - message: Access key AKIAQ2RER5ITITWHN2VL is younger than 90 days on thibautr@padok.fr
+          status: OK
+          resource_arn: thibautr@padok.fr
         - message: Access key AKIAQ2RER5ITCTN4ELVI is younger than 90 days on thomasd
           status: OK
           resource_arn: thomasd
-      duration: 21.293µs
-      starttime: 2022-11-07T23:00:14.148961+01:00
-      endtime: 2022-11-07T23:00:13.353094+01:00
+      duration: 16.082µs
+      starttime: 2022-11-17T02:50:05.044781+01:00
+      endtime: 2022-11-17T02:50:02.244576+01:00
     - name: IAM User can't elevate rights
       description: Check if  users can elevate rights
       status: FAIL
@@ -480,45 +513,48 @@
         - Security
         - Good Practice
       results:
-        - message: User aurelienv can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
-          status: FAIL
-          resource_arn: aurelienv
-        - message: User thomasd can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
-          status: FAIL
-          resource_arn: thomasd
-        - message: User nicolasb can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
-          status: FAIL
-          resource_arn: nicolasb
-        - message: User manonf can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
-          status: FAIL
-          resource_arn: manonf
         - message: User antoinea@padok.fr can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
           status: FAIL
           resource_arn: antoinea@padok.fr
-        - message: User anaell can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
+        - message: User nicolasb can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
           status: FAIL
-          resource_arn: anaell
-        - message: User nathanl@padok.fr can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
+          resource_arn: nicolasb
+        - message: User thibaultp can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
           status: FAIL
-          resource_arn: nathanl@padok.fr
-        - message: User oscarp can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
-          status: FAIL
-          resource_arn: oscarp
+          resource_arn: thibaultp
         - message: User arthurh can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
           status: FAIL
           resource_arn: arthurh
         - message: User jeremiem@padok.fr can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
           status: FAIL
           resource_arn: jeremiem@padok.fr
-        - message: User thibaultp can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
-          status: FAIL
-          resource_arn: thibaultp
         - message: User thibautr@padok.fr can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
           status: FAIL
           resource_arn: thibautr@padok.fr
-      duration: 75.947µs
-      starttime: 2022-11-07T23:00:14.148963+01:00
-      endtime: 2022-11-07T23:00:13.353138+01:00
+        - message: User oscarp can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
+          status: FAIL
+          resource_arn: oscarp
+        - message: User nathanl@padok.fr can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
+          status: FAIL
+          resource_arn: nathanl@padok.fr
+        - message: User pierrickc can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
+          status: FAIL
+          resource_arn: pierrickc
+        - message: User manonf can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
+          status: FAIL
+          resource_arn: manonf
+        - message: User aurelienv can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
+          status: FAIL
+          resource_arn: aurelienv
+        - message: User thomasd can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
+          status: FAIL
+          resource_arn: thomasd
+        - message: User anaell can elevate rights with [[lambda:UpdateFunctionConfiguration] [sagemaker:CreateNotebookInstance sagemaker:CreatePresignedNotebookInstanceUrl iam:PassRole] [sagemaker:CreatePresignedNotebookInstanceUrl]] only last 3 policies
+          status: FAIL
+          resource_arn: anaell
+      duration: 95.889µs
+      starttime: 2022-11-17T02:50:05.044785+01:00
+      endtime: 2022-11-17T02:50:02.244673+01:00
     - name: IAM Users have not used their password for 120 days
       description: Check if all users have not used their password for 120 days
       status: FAIL
@@ -554,6 +590,9 @@
         - message: Password has been used in the last 120 days on oscarp
           status: OK
           resource_arn: oscarp
+        - message: Password has been used in the last 120 days on pierrickc
+          status: OK
+          resource_arn: pierrickc
         - message: Password has been used in the last 120 days on thibaultp
           status: OK
           resource_arn: thibaultp
@@ -563,9 +602,9 @@
         - message: Password has been used in the last 120 days on thomasd
           status: OK
           resource_arn: thomasd
-      duration: 8.084µs
-      starttime: 2022-11-07T23:00:14.148959+01:00
-      endtime: 2022-11-07T23:00:13.35307+01:00
+      duration: 34.414µs
+      starttime: 2022-11-17T02:50:05.044783+01:00
+      endtime: 2022-11-17T02:50:02.244653+01:00
     - name: Lambdas are private
       description: Check if all Lambdas are private
       status: OK
@@ -574,9 +613,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 5.011µs
-      starttime: 2022-11-07T23:00:14.148769+01:00
-      endtime: 2022-11-07T23:00:04.654839+01:00
+      duration: 1.756µs
+      starttime: 2022-11-17T02:50:05.044562+01:00
+      endtime: 2022-11-17T02:49:56.759689+01:00
     - name: Lambdas are in a security group
       description: Check if all Lambdas are in a security group
       status: OK
@@ -585,9 +624,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 3.096µs
-      starttime: 2022-11-07T23:00:14.148769+01:00
-      endtime: 2022-11-07T23:00:04.65485+01:00
+      duration: 1.104µs
+      starttime: 2022-11-17T02:50:05.044562+01:00
+      endtime: 2022-11-17T02:49:56.759691+01:00
     - name: Lambdas are not with errors
       description: Check if all Lambdas are running smoothly
       status: OK
@@ -596,9 +635,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 19.149µs
-      starttime: 2022-11-07T23:00:14.14877+01:00
-      endtime: 2022-11-07T23:00:04.654873+01:00
+      duration: 735ns
+      starttime: 2022-11-17T02:50:05.044563+01:00
+      endtime: 2022-11-17T02:49:56.759693+01:00
     - name: RDS are encrypted
       description: Check if RDS encryption is enabled
       status: OK
@@ -610,9 +649,9 @@
         - message: RDS encryption is enabled on database-1
           status: OK
           resource_arn: arn:aws:rds:eu-west-3:056984988198:db:database-1
-      duration: 9.493µs
-      starttime: 2022-11-07T23:00:14.148793+01:00
-      endtime: 2022-11-07T23:00:04.936959+01:00
+      duration: 12.683µs
+      starttime: 2022-11-17T02:50:05.044567+01:00
+      endtime: 2022-11-17T02:49:56.900276+01:00
     - name: RDS are backedup automatically with PITR
       description: Check if RDS backup is enabled
       status: OK
@@ -624,9 +663,9 @@
         - message: RDS backup is enabled on database-1
           status: OK
           resource_arn: arn:aws:rds:eu-west-3:056984988198:db:database-1
-      duration: 19.526µs
-      starttime: 2022-11-07T23:00:14.148793+01:00
-      endtime: 2022-11-07T23:00:04.936951+01:00
+      duration: 4.188µs
+      starttime: 2022-11-17T02:50:05.044579+01:00
+      endtime: 2022-11-17T02:49:56.900278+01:00
     - name: RDS have minor versions automatically updated
       description: Check if RDS minor auto upgrade is enabled
       status: OK
@@ -638,9 +677,9 @@
         - message: RDS auto upgrade is enabled on database-1
           status: OK
           resource_arn: arn:aws:rds:eu-west-3:056984988198:db:database-1
-      duration: 7.948µs
-      starttime: 2022-11-07T23:00:14.148794+01:00
-      endtime: 2022-11-07T23:00:04.936963+01:00
+      duration: 1.903µs
+      starttime: 2022-11-17T02:50:05.04458+01:00
+      endtime: 2022-11-17T02:49:56.90028+01:00
     - name: RDS aren't publicly accessible
       description: Check if RDS private is enabled
       status: FAIL
@@ -652,9 +691,9 @@
         - message: RDS private is not enabled on database-1
           status: FAIL
           resource_arn: arn:aws:rds:eu-west-3:056984988198:db:database-1
-      duration: 9.995µs
-      starttime: 2022-11-07T23:00:14.148794+01:00
-      endtime: 2022-11-07T23:00:04.936971+01:00
+      duration: 7.552µs
+      starttime: 2022-11-17T02:50:05.04458+01:00
+      endtime: 2022-11-17T02:49:56.900288+01:00
     - name: RDS logs are exported to cloudwatch
       description: Check if RDS logging is enabled
       status: FAIL
@@ -666,9 +705,9 @@
         - message: RDS logging is not enabled on database-1
           status: FAIL
           resource_arn: arn:aws:rds:eu-west-3:056984988198:db:database-1
-      duration: 4.913µs
-      starttime: 2022-11-07T23:00:14.148818+01:00
-      endtime: 2022-11-07T23:00:04.937003+01:00
+      duration: 2.634µs
+      starttime: 2022-11-17T02:50:05.044581+01:00
+      endtime: 2022-11-17T02:49:56.900305+01:00
     - name: RDS have the deletion protection enabled
       description: Check if RDS delete protection is enabled
       status: FAIL
@@ -680,9 +719,9 @@
         - message: RDS delete protection is not enabled on database-1
           status: FAIL
           resource_arn: arn:aws:rds:eu-west-3:056984988198:db:database-1
-      duration: 8.779µs
-      starttime: 2022-11-07T23:00:14.148817+01:00
-      endtime: 2022-11-07T23:00:04.937002+01:00
+      duration: 2.421µs
+      starttime: 2022-11-17T02:50:05.044581+01:00
+      endtime: 2022-11-17T02:49:56.900307+01:00
     - name: Aurora Clusters have minor versions automatically updated
       description: Check if Aurora RDS minor auto upgrade is enabled
       status: OK
@@ -691,9 +730,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 1.499µs
-      starttime: 2022-11-07T23:00:14.148795+01:00
-      endtime: 2022-11-07T23:00:04.936977+01:00
+      duration: 1.01µs
+      starttime: 2022-11-17T02:50:05.044581+01:00
+      endtime: 2022-11-17T02:49:56.90031+01:00
     - name: Aurora RDS are backedup automatically with PITR
       description: Check if Aurora RDS backup is enabled
       status: OK
@@ -702,9 +741,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 1.864µs
-      starttime: 2022-11-07T23:00:14.148794+01:00
-      endtime: 2022-11-07T23:00:04.93697+01:00
+      duration: 4.404µs
+      starttime: 2022-11-17T02:50:05.04458+01:00
+      endtime: 2022-11-17T02:49:56.900304+01:00
     - name: Aurora RDS have the deletion protection enabled
       description: Check if Aurora RDS delete protection is enabled
       status: OK
@@ -713,9 +752,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 3.447µs
-      starttime: 2022-11-07T23:00:14.148795+01:00
-      endtime: 2022-11-07T23:00:04.936981+01:00
+      duration: 1.479µs
+      starttime: 2022-11-17T02:50:05.04458+01:00
+      endtime: 2022-11-17T02:49:56.900301+01:00
     - name: Aurora RDS are encrypted
       description: Check if Aurora RDS encryption is enabled
       status: OK
@@ -724,9 +763,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 18.141µs
-      starttime: 2022-11-07T23:00:14.148817+01:00
-      endtime: 2022-11-07T23:00:04.937001+01:00
+      duration: 1.304µs
+      starttime: 2022-11-17T02:50:05.044582+01:00
+      endtime: 2022-11-17T02:49:56.900316+01:00
     - name: Aurora RDS logs are exported to cloudwatch
       description: Check if Aurora RDS logging is enabled
       status: OK
@@ -735,9 +774,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 2.663µs
-      starttime: 2022-11-07T23:00:14.148817+01:00
-      endtime: 2022-11-07T23:00:04.936983+01:00
+      duration: 4.264µs
+      starttime: 2022-11-17T02:50:05.044582+01:00
+      endtime: 2022-11-17T02:49:56.900322+01:00
     - name: Aurora RDS aren't publicly accessible
       description: Check if Aurora RDS private is enabled
       status: OK
@@ -746,9 +785,9 @@
         - Security
         - Good Practice
       results: []
-      duration: 1.772µs
-      starttime: 2022-11-07T23:00:14.148817+01:00
-      endtime: 2022-11-07T23:00:04.936987+01:00
+      duration: 5.513µs
+      starttime: 2022-11-17T02:50:05.044582+01:00
+      endtime: 2022-11-17T02:49:56.900315+01:00
     - name: S3 are encrypted
       description: Check if S3 encryption is enabled
       status: FAIL
@@ -763,6 +802,9 @@
         - message: S3 bucket cdktoolkit-stagingbucket-1ruc2qea9gqzp is using encryption
           status: OK
           resource_arn: cdktoolkit-stagingbucket-1ruc2qea9gqzp
+        - message: S3 bucket my-tf-wizz-bucket is not using encryption
+          status: FAIL
+          resource_arn: my-tf-wizz-bucket
         - message: S3 bucket static-web-page.padok is not using encryption
           status: FAIL
           resource_arn: static-web-page.padok
@@ -772,9 +814,9 @@
         - message: S3 bucket waf-test-wizz-anael is not using encryption
           status: FAIL
           resource_arn: waf-test-wizz-anael
-      duration: 26.563µs
-      starttime: 2022-11-07T23:00:14.148965+01:00
-      endtime: 2022-11-07T23:00:14.138305+01:00
+      duration: 4.788µs
+      starttime: 2022-11-17T02:50:05.044786+01:00
+      endtime: 2022-11-17T02:50:05.035332+01:00
     - name: S3 buckets are not global but in one zone
       description: Check if S3 buckets are in one zone
       status: FAIL
@@ -795,6 +837,9 @@
         - message: S3 bucket manon-test-2022-08-16 is global but should be in eu-west-3
           status: FAIL
           resource_arn: manon-test-2022-08-16
+        - message: S3 bucket my-tf-wizz-bucket is in eu-west-3
+          status: OK
+          resource_arn: my-tf-wizz-bucket
         - message: S3 bucket static-web-page.padok is in eu-west-3
           status: OK
           resource_arn: static-web-page.padok
@@ -807,9 +852,9 @@
         - message: S3 bucket waf-test-wizz-anael is in eu-west-3
           status: OK
           resource_arn: waf-test-wizz-anael
-      duration: 10.764µs
-      starttime: 2022-11-07T23:00:14.148978+01:00
-      endtime: 2022-11-07T23:00:14.138348+01:00
+      duration: 21.495µs
+      starttime: 2022-11-17T02:50:05.044787+01:00
+      endtime: 2022-11-17T02:50:05.035361+01:00
     - name: S3 buckets are versioned
       description: Check if S3 buckets are using object versioning
       status: FAIL
@@ -824,6 +869,9 @@
         - message: S3 bucket cdktoolkit-stagingbucket-1ruc2qea9gqzp is not using object versioning
           status: FAIL
           resource_arn: cdktoolkit-stagingbucket-1ruc2qea9gqzp
+        - message: S3 bucket my-tf-wizz-bucket is not using object versioning
+          status: FAIL
+          resource_arn: my-tf-wizz-bucket
         - message: S3 bucket static-web-page.padok is not using object versioning
           status: FAIL
           resource_arn: static-web-page.padok
@@ -833,9 +881,9 @@
         - message: S3 bucket waf-test-wizz-anael is not using object versioning
           status: FAIL
           resource_arn: waf-test-wizz-anael
-      duration: 15.342µs
-      starttime: 2022-11-07T23:00:14.148967+01:00
-      endtime: 2022-11-07T23:00:14.138321+01:00
+      duration: 3.45µs
+      starttime: 2022-11-17T02:50:05.044789+01:00
+      endtime: 2022-11-17T02:50:05.035367+01:00
     - name: S3 buckets have a retention policy
       description: Check if S3 buckets are using retention policy
       status: FAIL
@@ -850,6 +898,9 @@
         - message: S3 bucket cdktoolkit-stagingbucket-1ruc2qea9gqzp is not using retention policy
           status: FAIL
           resource_arn: cdktoolkit-stagingbucket-1ruc2qea9gqzp
+        - message: S3 bucket my-tf-wizz-bucket is not using retention policy
+          status: FAIL
+          resource_arn: my-tf-wizz-bucket
         - message: S3 bucket static-web-page.padok is not using retention policy
           status: FAIL
           resource_arn: static-web-page.padok
@@ -859,9 +910,9 @@
         - message: S3 bucket waf-test-wizz-anael is not using retention policy
           status: FAIL
           resource_arn: waf-test-wizz-anael
-      duration: 19.48µs
-      starttime: 2022-11-07T23:00:14.148968+01:00
-      endtime: 2022-11-07T23:00:14.138331+01:00
+      duration: 2.047µs
+      starttime: 2022-11-17T02:50:05.04479+01:00
+      endtime: 2022-11-17T02:50:05.03537+01:00
     - name: S3 bucket have public access block enabled
       description: Check if S3 buckets are using Public Access Block
       status: OK
@@ -876,6 +927,9 @@
         - message: S3 bucket cdktoolkit-stagingbucket-1ruc2qea9gqzp is using Public Access Block
           status: OK
           resource_arn: cdktoolkit-stagingbucket-1ruc2qea9gqzp
+        - message: S3 bucket my-tf-wizz-bucket is using Public Access Block
+          status: OK
+          resource_arn: my-tf-wizz-bucket
         - message: S3 bucket static-web-page.padok is using Public Access Block
           status: OK
           resource_arn: static-web-page.padok
@@ -885,9 +939,9 @@
         - message: S3 bucket waf-test-wizz-anael is using Public Access Block
           status: OK
           resource_arn: waf-test-wizz-anael
-      duration: 9.63µs
-      starttime: 2022-11-07T23:00:14.148973+01:00
-      endtime: 2022-11-07T23:00:14.138339+01:00
+      duration: 3.025µs
+      starttime: 2022-11-17T02:50:05.044791+01:00
+      endtime: 2022-11-17T02:50:05.03541+01:00
     - name: EC2's volumes are encrypted
       description: Check if EC2 encryption is enabled
       status: FAIL
@@ -896,12 +950,15 @@
         - Security
         - Good Practice
       results:
+        - message: EC2 encryption is not enabled on vol-055f7aefc957ef83f
+          status: FAIL
+          resource_arn: vol-055f7aefc957ef83f
         - message: EC2 encryption is not enabled on vol-05e2ed98f2cb26bc7
           status: FAIL
           resource_arn: vol-05e2ed98f2cb26bc7
-      duration: 2.5µs
-      starttime: 2022-11-07T23:00:14.148819+01:00
-      endtime: 2022-11-07T23:00:05.058067+01:00
+      duration: 4.744µs
+      starttime: 2022-11-17T02:50:05.044564+01:00
+      endtime: 2022-11-17T02:49:56.826569+01:00
     - name: EC2 are using GP3
       description: Check if all volumes are of type gp3
       status: FAIL
@@ -910,12 +967,15 @@
         - Security
         - Good Practice
       results:
+        - message: Volume vol-055f7aefc957ef83f is not of type gp3
+          status: FAIL
+          resource_arn: vol-055f7aefc957ef83f
         - message: Volume vol-05e2ed98f2cb26bc7 is not of type gp3
           status: FAIL
           resource_arn: vol-05e2ed98f2cb26bc7
-      duration: 2.536µs
-      starttime: 2022-11-07T23:00:14.14882+01:00
-      endtime: 2022-11-07T23:00:05.058076+01:00
+      duration: 6.359µs
+      starttime: 2022-11-17T02:50:05.044565+01:00
+      endtime: 2022-11-17T02:49:56.826577+01:00
     - name: EC2 have snapshots
       description: Check if all volumes have snapshots
       status: FAIL
@@ -924,12 +984,15 @@
         - Security
         - Good Practice
       results:
+        - message: Volume vol-055f7aefc957ef83f has no snapshot
+          status: FAIL
+          resource_arn: vol-055f7aefc957ef83f
         - message: Volume vol-05e2ed98f2cb26bc7 has no snapshot
           status: FAIL
           resource_arn: vol-05e2ed98f2cb26bc7
-      duration: 24.881µs
-      starttime: 2022-11-07T23:00:14.14882+01:00
-      endtime: 2022-11-07T23:00:05.058103+01:00
+      duration: 1.722µs
+      starttime: 2022-11-17T02:50:05.044565+01:00
+      endtime: 2022-11-17T02:49:56.826582+01:00
     - name: EC2's volumes are unused
       description: Check if EC2 volumes are unused
       status: OK
@@ -938,12 +1001,15 @@
         - Security
         - Good Practice
       results:
+        - message: EC2 volume is in use vol-055f7aefc957ef83f
+          status: OK
+          resource_arn: vol-055f7aefc957ef83f
         - message: EC2 volume is in use vol-05e2ed98f2cb26bc7
           status: OK
           resource_arn: vol-05e2ed98f2cb26bc7
-      duration: 4.995µs
-      starttime: 2022-11-07T23:00:14.148818+01:00
-      endtime: 2022-11-07T23:00:05.058035+01:00
+      duration: 1.985µs
+      starttime: 2022-11-17T02:50:05.044566+01:00
+      endtime: 2022-11-17T02:49:56.826592+01:00
     - name: VPC CIDRs are bigger than /20
       description: Check if VPC CIDR is /20 or bigger
       status: OK
@@ -961,9 +1027,9 @@
         - message: VPC CIDR is /20 or bigger on vpc-0c69e467376a3d597
           status: OK
           resource_arn: vpc-0c69e467376a3d597
-      duration: 60.604µs
-      starttime: 2022-11-07T23:00:14.14895+01:00
-      endtime: 2022-11-07T23:00:06.542379+01:00
+      duration: 7.214µs
+      starttime: 2022-11-17T02:50:05.044585+01:00
+      endtime: 2022-11-17T02:49:57.400673+01:00
     - name: VPC can't be in the same account
       description: Check if VPC has only one VPC
       status: FAIL
@@ -981,9 +1047,9 @@
         - message: VPC Id:vpc-0c69e467376a3d597
           status: FAIL
           resource_arn: vpc-0c69e467376a3d597
-      duration: 12.632µs
-      starttime: 2022-11-07T23:00:14.148948+01:00
-      endtime: 2022-11-07T23:00:06.542338+01:00
+      duration: 6.877µs
+      starttime: 2022-11-17T02:50:05.044769+01:00
+      endtime: 2022-11-17T02:49:57.400682+01:00
     - name: VPC only have one Gateway
       description: Check if VPC has only one gateway
       status: OK
@@ -1001,9 +1067,9 @@
         - message: VPC has only one gateway on vpc-0c69e467376a3d597
           status: OK
           resource_arn: vpc-0c69e467376a3d597
-      duration: 8.755µs
-      starttime: 2022-11-07T23:00:14.148826+01:00
-      endtime: 2022-11-07T23:00:06.542282+01:00
+      duration: 2.247µs
+      starttime: 2022-11-17T02:50:05.04477+01:00
+      endtime: 2022-11-17T02:49:57.400686+01:00
     - name: VPC Flow Logs are activated
       description: Check if VPC Flow Logs are enabled
       status: FAIL
@@ -1021,9 +1087,9 @@
         - message: VPC Flow Logs are not enabled on vpc-0c69e467376a3d597
           status: FAIL
           resource_arn: vpc-0c69e467376a3d597
-      duration: 4.632µs
-      starttime: 2022-11-07T23:00:14.148828+01:00
-      endtime: 2022-11-07T23:00:06.542301+01:00
+      duration: 4.765µs
+      starttime: 2022-11-17T02:50:05.04459+01:00
+      endtime: 2022-11-17T02:49:57.400674+01:00
     - name: VPC have at least 2 subnets
       description: Check if VPC has at least 2 subnets
       status: FAIL
@@ -1041,9 +1107,9 @@
         - message: VPC vpc-0c69e467376a3d597 has at least 2 subnets
           status: OK
           resource_arn: vpc-0c69e467376a3d597
-      duration: 6.812µs
-      starttime: 2022-11-07T23:00:14.148947+01:00
-      endtime: 2022-11-07T23:00:06.542319+01:00
+      duration: 2.327µs
+      starttime: 2022-11-17T02:50:05.044768+01:00
+      endtime: 2022-11-17T02:49:57.400678+01:00
     - name: VPC's Subnets are in different zones
       description: Check if Subnet are in different zone
       status: FAIL
@@ -1061,6 +1127,6 @@
         - message: Subnets are in different zone on vpc-0c69e467376a3d597
           status: OK
           resource_arn: vpc-0c69e467376a3d597
-      duration: 12.828µs
-      starttime: 2022-11-07T23:00:14.148949+01:00
-      endtime: 2022-11-07T23:00:06.542343+01:00
+      duration: 5.055µs
+      starttime: 2022-11-17T02:50:05.044769+01:00
+      endtime: 2022-11-17T02:49:57.400684+01:00

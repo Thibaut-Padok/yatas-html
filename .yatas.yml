@@ -8,7 +8,7 @@ plugins:
     enabled: true
     type: "report"
     source: "github.com/Thibaut-Padok/yatas-html"
-    version: "latest"
+    version: "local"
     description: "Genereates a html report in report.html file"
 
 ignore:

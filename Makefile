@@ -11,8 +11,8 @@ update:
 	go mod tidy
 
 install: build
-	mkdir -p ~/.yatas.d/plugins/github.com/StanGirard/yatas-html/local/
-	mv ./bin/yatas-html ~/.yatas.d/plugins/github.com/StanGirard/yatas-html/local/
+	mkdir -p ~/.yatas.d/plugins/github.com/Thibaut-Padok/yatas-html/local/
+	mv ./bin/yatas-html ~/.yatas.d/plugins/github.com/Thibaut-Padok/yatas-html/local/
 
 release: test
 	standard-version

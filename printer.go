@@ -1,12 +1,15 @@
 package main
 
 import (
-	"fmt"
+	"embed"
 	"os"
 	"strconv"
 
 	"github.com/stangirard/yatas/plugins/commons"
 )
+
+//go:embed templates/*
+var f embed.FS
 
 func startTable(file *os.File, table_name string, attributes []string) {
 	// To start an new html table
@@ -64,22 +67,14 @@ func closeTable(file *os.File) {
 
 func copyHeader(file *os.File) {
 	// To start html file from header template
-	src := "./templates/template-header.html"
-	bytes, err := os.ReadFile(src)
-	if err != nil {
-		fmt.Print(err)
-	}
-	content := string(bytes)
+	data, _ := f.ReadFile("templates/template-header.html")
+	content := string(data)
 	file.WriteString(content)
 }
 func copyFooter(file *os.File) {
 	// To end html file from header template
-	src := "./templates/template-footer.html"
-	bytes, err := os.ReadFile(src)
-	if err != nil {
-		fmt.Print(err)
-	}
-	content := string(bytes)
+	data, _ := f.ReadFile("templates/template-footer.html")
+	content := string(data)
 	file.WriteString(content)
 }
 
